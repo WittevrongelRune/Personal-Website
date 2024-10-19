@@ -146,7 +146,7 @@ section p {
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "Frontend ."
                          ". Backend";
-    gap: 10rem;
+    gap: 5rem;
     margin-top: 2rem;
 }
 
@@ -167,7 +167,16 @@ section p {
     margin-top: 2rem;
     color: white;
     text-decoration: none;
+}
 
+#sayHello:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+footer{
+    margin: 0 0 0.5rem 1rem;
+    color: white;
 }
 
 
@@ -208,7 +217,7 @@ section p {
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas: "Frontend"
                              "Backend";
-        gap: 5rem;
+        gap: 2rem;
     }
 
     #frontend,

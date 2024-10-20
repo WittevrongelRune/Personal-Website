@@ -31,30 +31,31 @@ body {
     scroll-behavior: smooth;
 }
 
-h2 {
+section h2 {
     position: relative;
     text-align: center;
     font-size: 3rem;
     color: white;
     margin: 20px 0;
+
 }
 
-h2::before,
-h2::after {
+section h2::before,
+section h2::after {
     content: '';
     position: absolute;
     top: 50%;
-    width: 40%;
+    width: 10rem;
     height: 1px;
     background-color: rgb(187, 242, 242);
 }
 
-h2::before {
-    left: -45%; 
+section h2::before {
+    left: -12rem; 
 }
 
-h2::after {
-    right: -45%; 
+section h2::after {
+    right: -12rem; 
 }
 
 nav {

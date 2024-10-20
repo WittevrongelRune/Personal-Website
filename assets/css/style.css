@@ -85,13 +85,16 @@ nav ul > :first-child {
 nav ul li {
     display: inline;
     border-right: 1px solid white; 
-    padding: 0 10px;
+    padding: 0 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color); 
 }
 
 section {
     min-height: 90vh;
-    margin: 20px;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 10px;
     color: white;
     display: flex;
@@ -111,9 +114,12 @@ section h1 {
 
 
 section p {
+    margin-top: 0.5rem;
     font-size: 1.5rem;
+    font-weight: 100;
     max-width: 1000px;
     line-height: 1.5;
+    
 }
 
 #howestLink {

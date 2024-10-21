@@ -24,10 +24,9 @@ function renderAge() {
     if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
         age--;
     }
-    const $age = document.querySelector('#age');
+    const $age = document.querySelector('#ageYear');
     if ($age) {
         $age.textContent = age;
     }
-    console.log(age);
 }
 

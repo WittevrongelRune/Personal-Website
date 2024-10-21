@@ -6,6 +6,8 @@
     <meta name="description" content="I am a software engineering student. Currently, I'm in my second year at Howest Brugge.">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css"> 
+    <link rel="stylesheet" href="assets/css/mobile.css">   
     <script src="assets/js/script.js" type="module"></script>
     <title>Rune Wittevrongel's website</title>
     
@@ -65,14 +67,29 @@
                         I also utilize the Laravel framework to build structured and maintainable web applications. 
                         Additionally, I work with Node.js to create scalable server-side solutions, develop RESTful APIs, and handle real-time data effectively.
                     </p>
-                </div>
+                </div>                
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>If you have any questions or would like to get in touch, feel free to send me an email!</p>
-            <a href="mailto:wittevrongelrune@telenet.be" id="sayHello">Say hello</a>
+            <div id="contactContainer">
+                <div id="email">
+                    <p>If you have any questions or would like to get in touch, feel free to send me an email!</p>
+                    <a href="mailto:wittevrongelrune@telenet.be" id="contactMe">Contact Me!</a>
+                </div>
+
+                <div id="socials">
+                    <p>Or if you would like you can connect with me via other platforms:</p>
+                    <a href="https://www.linkedin.com/in/rune-wittevrongel-506691295/" target="_blank" class="socialMediaLink">
+                        <img src="assets/images/icons/linkedin.png" alt="LinkedIn" class="socialIcon"> LinkedIn
+                    </a>
+                    <a href="https://github.com/WittevrongelRune" target="_blank" class="socialMediaLink">
+                        <img src="assets/images/icons/github.png" alt="GitHub" class="socialIcon"> GitHub
+                    </a>
+                </div>  
+                        
+            </div>
         </section>
     </main>
 

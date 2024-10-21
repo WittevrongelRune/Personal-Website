@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-    --primary-color: rgb(187, 242, 242);
-    --secondary-color: rgb(3, 64, 64);
+    --lightBackGround-color: rgb(82, 151, 151);
+    --darkBackground-color: rgb(2, 52, 52);
+    --text-color: rgb(179, 238, 238);;
 }
 
 html{
@@ -14,18 +15,18 @@ html{
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--secondary-color);
+    background: var(--darkBackground-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color); 
+    background-color: var(--text-color); 
     border-radius: 10px; 
 
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--secondary-color);
+    background-image: linear-gradient(to bottom right, var(--lightBackGround-color), var(--darkBackground-color));
     justify-content: center;
     margin: 0;
     scroll-behavior: smooth;
@@ -66,11 +67,8 @@ nav {
     top: 0;
     font-size: 1.5rem;
     color: white;
-    background-color: var(--secondary-color);
     z-index: 1;
     width: 100%; 
-
-
 }
 
 nav a {
@@ -90,7 +88,7 @@ nav ul li {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color); 
+    color: var(--text-color); 
 }
 
 section {
@@ -106,7 +104,7 @@ section {
 
 section h1 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 section h1 {
@@ -124,7 +122,7 @@ section p {
 }
 
 #howestLink {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
     margin-top: 2rem;
@@ -139,7 +137,7 @@ section p {
     left: 0;
     width: 0; 
     height: 2px; 
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     transition: width 0.3s ease, left 0.3s ease; 
 }
 
@@ -167,18 +165,59 @@ section p {
     max-width: 56.25rem;
 }
 
-#sayHello{
-    border: 1px solid var(--primary-color);
+
+#contactMe{
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--text-color);
     border-radius: 5%;
     padding: 1rem;
-    margin-top: 2rem;
+    margin: 1rem auto;
+    max-width: 6rem;
     color: white;
     text-decoration: none;
+    
 }
 
-#sayHello:hover {
+#contactMe:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: translateY(-2px);
+}
+
+#contactContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Email Socials";
+    gap: 5rem;
+}
+
+#email {
+    grid-area: Email;
+    max-width: 30rem;
+}
+
+#socials {
+    grid-area: Socials;
+    max-width: 30rem;
+}
+
+.socialMediaLink {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem auto auto auto;
+    color: inherit;
+    text-decoration: none;
+    padding:auto;
+    max-width: 8rem;
+}
+
+.socialMediaLink:hover {
+    transform: translateY(-2px);
+}
+
+.socialIcon {
+    width: 3.5rem;
+    height: 3.5rem; 
 }
 
 footer{
@@ -187,88 +226,6 @@ footer{
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#home > * {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-#home > *:nth-child(1) {
-    animation-delay: 250ms;
-}
-
-#home > *:nth-child(2) {
-    animation-delay: 500ms;
-}
-
-#home > *:nth-child(3) {
-    animation-delay: 750ms;
-}
-
-/* Responsive design */
-
-@media screen and (max-width: 768px) {
-
-    #skillsContainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: "Frontend"
-                             "Backend";
-        gap: 2rem;
-    }
-
-    #frontend,
-    #backend {
-        max-width: 100%;
-    }
-
-    h2::before,
-    h2::after {
-        width: 20%;
-    }
-
-    h2::before {
-        left: -25%; 
-    }
-
-    h2::after {
-        right: -25%; 
-    }
-
-    nav {
-        font-size: 1rem;
-    }
-
-    section h1 {
-        font-size: 1.5rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-
-    #howestLink {
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-    
-    
-
-
-}
 
 
 

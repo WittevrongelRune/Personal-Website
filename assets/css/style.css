@@ -116,7 +116,7 @@ section p {
     margin-top: 0.5rem;
     font-size: 1.5rem;
     font-weight: 100;
-    max-width: 1000px;
+    max-width: 64rem;
     line-height: 1.5;
     
 }
@@ -201,16 +201,23 @@ section p {
     max-width: 30rem;
 }
 
+#socialIcons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5rem auto;
+}
+
 .socialMediaLink {
     display: flex;
     align-items: center;
-    margin: 0.5rem auto auto auto;
+    margin: 0.5rem;
     color: inherit;
     text-decoration: none;
-    padding:auto;
-    max-width: 8rem;
 }
 
+.socialMediaLink img {
+    margin-right: 0.5rem;
+}
 .socialMediaLink:hover {
     transform: translateY(-2px);
 }
@@ -224,8 +231,5 @@ footer{
     margin: 0 0 0.5rem 1rem;
     color: white;
 }
-
-
-
 
 

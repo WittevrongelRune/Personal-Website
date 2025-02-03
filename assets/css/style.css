@@ -27,8 +27,6 @@ html{
 body {
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to bottom right, var(--lightBackGround-color), var(--ultraDarkBackground-color));
-    background-size: 4000% 4000%;
-    animation: gradientAnimation 12s ease infinite;
     justify-content: center;
     margin: 0;
     scroll-behavior: smooth;
@@ -165,12 +163,40 @@ section p {
     grid-area: Backend; 
     max-width: 56.25rem;
 }
-
 #languages {
     grid-area: Languages;
+    max-width: 56.25rem;
+}
+
+#languagesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.language {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    background: var(--darkBackground-color);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+
+}
+
+.language:hover {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.langIcon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.75rem;
 }
 
 

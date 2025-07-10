@@ -4,6 +4,7 @@ init();
 function init() {
     renderCopyrightYear();
     renderAge();
+    renderSection();
 }
 
 function renderCopyrightYear() {
@@ -28,5 +29,20 @@ function renderAge() {
     if ($age) {
         $age.textContent = age;
     }
+}
+
+function renderSection() {
+
+    document.querySelectorAll('section').forEach((section) => {
+        section.classList.add('hidden');
+        const observer = new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) {
+            section.classList.add('visible');
+            observer.unobserve(section);
+          }
+        });
+        observer.observe(section);
+      });
+
 }
 

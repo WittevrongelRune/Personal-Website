@@ -5,6 +5,7 @@ function init() {
     renderAge();
     renderSection();
     initializeScrollAnimations();
+    initMobileMenu();
 }
 
 function renderCopyrightYear() {
@@ -80,10 +81,50 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth',
                     block: 'start'
                 });
+                
+                // Close mobile menu after clicking a link
+                closeMobileMenu();
             }
         });
     });
 });
+
+// Mobile Navigation Hamburger Menu
+function initMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close menu on window resize if desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+    }
+}
+
+function closeMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburger && navMenu) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+}
 
 // Hide home section elements initially
 function hideHomeElements() {

@@ -445,7 +445,7 @@ section p {
     border: 2px solid var(--text-color);
     border-radius: 25px;
     padding: 1rem 2rem;
-    margin: 1rem auto;
+    margin: 2rem auto 1rem auto;
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -455,6 +455,12 @@ section p {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
+}
+
+#email {
+    grid-area: Email;
+    max-width: 30rem;
+    text-align: center;
 }
 
 #contactMe::before {

@@ -374,7 +374,7 @@ section p {
 
 #languages {
     grid-area: Languages;
-    max-width: 56.25rem;
+    max-width: 100%;
 }
 
 #languagesContainer {

@@ -883,22 +883,14 @@ footer{
         box-shadow: 0 0 20px rgba(179, 238, 238, 0.3);
     }
      
-
-    
-    /* Specific styling for home section on mobile */
-    #home {
-        min-height: 100vh;
+    section {
+        min-height: 90vh;
         justify-content: center;
         align-items: center;
         display: flex;
         flex-direction: column;
     }
     
-    /* Make other sections start from top on mobile */
-    #about, #skills, #contact {
-        min-height: 100vh;
-        padding-top: 2rem;
-    }
     
     section h1 {
         font-size: clamp(1.8rem, 8vw, 2.5rem);

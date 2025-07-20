@@ -194,13 +194,13 @@ section {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #home p.hidden #howestLink {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 /* Show home section elements with animation */
@@ -215,13 +215,13 @@ section {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #home p.visible #howestLink {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 section h1 {
@@ -826,10 +826,15 @@ footer{
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    /* Adjust body padding for mobile */
+    body {
+        padding-top: 0;
+    }
+    
     /* Show hamburger menu on mobile */
     .hamburger {
         display: flex;
-        position:fixed;
+        position: fixed;
     }
     
     /* Mobile navigation */
@@ -878,9 +883,21 @@ footer{
         box-shadow: 0 0 20px rgba(179, 238, 238, 0.3);
     }
      
-    section {
-        padding: 2rem 1rem;
-        min-height: auto;
+
+    
+    /* Specific styling for home section on mobile */
+    #home {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Make other sections start from top on mobile */
+    #about, #skills, #contact {
+        min-height: 100vh;
+        padding-top: 2rem;
     }
     
     section h1 {

@@ -301,7 +301,7 @@ section p {
 #skillsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
     grid-template-areas: "Frontend Backend"
                          "Languages Languages";
     gap: 2rem;

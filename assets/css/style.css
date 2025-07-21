@@ -37,7 +37,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     position: relative;
-    padding-top: 80px; /* Add this to prevent content from hiding behind navbar */
+
 }
 
 body::before {
@@ -536,11 +536,6 @@ section p {
         0 0 30px rgba(179, 238, 238, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-color: rgba(179, 238, 238, 0.6);
-}
-
-#email {
-    grid-area: Email;
-    max-width: 30rem;
 }
 
 #socials {

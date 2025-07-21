@@ -6,6 +6,7 @@ function init() {
     renderSection();
     initializeScrollAnimations();
     initMobileMenu();
+    initHomeAnimations();
 }
 
 function renderCopyrightYear() {
@@ -126,6 +127,24 @@ function closeMobileMenu() {
     }
 }
 
+// Initialize home section animations
+function initHomeAnimations() {
+    // Check if DOM is already loaded or wait for it
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', startHomeAnimations);
+    } else {
+        // DOM is already loaded, start animations immediately
+        startHomeAnimations();
+    }
+}
+
+function startHomeAnimations() {
+    // Hide home elements immediately
+    hideHomeElements();
+    // Start typing effect after a short delay
+    setTimeout(addTypingEffect, 800);
+}
+
 // Hide home section elements initially
 function hideHomeElements() {
     const headings = document.querySelectorAll('#home h1, #home h2');
@@ -186,11 +205,3 @@ function addTypingEffect() {
         }
     }
 }
-
-// Enhanced initialization with proper timing
-document.addEventListener('DOMContentLoaded', () => {
-    // Hide home elements immediately when DOM is ready
-    hideHomeElements();
-    // Start typing effect after a short delay
-    setTimeout(addTypingEffect, 800);
-});
